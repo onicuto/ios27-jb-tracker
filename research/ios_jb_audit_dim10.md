@@ -17,50 +17,50 @@
 ## 2. Раздел A: Верификация фактов
 
 ### A1. Процессоры устройств (быстрая проверка) — Подтверждено
-- iPhone 12 Pro Max = A14 Bionic (в спецификациях EveryMac для всех модификаций указан процессор A14 Bionic)[^1^].
-- iPad mini (6-го поколения) = A15 Bionic (оснащен тем же чипом A15 Bionic, что и iPhone 13 Pro)[^2^].
+- iPhone 12 Pro Max = A14 Bionic (в спецификациях EveryMac для всех модификаций указан процессор A14 Bionic)[^1].
+- iPad mini (6-го поколения) = A15 Bionic (оснащен тем же чипом A15 Bionic, что и iPhone 13 Pro)[^2].
 
 ### A2. Фактическая ошибка отчета №1: «Apple прекратила поддержку iPhone 11» — [ОПРОВЕРГНУТО]
-В официальном списке совместимости iOS 27 значатся все модели линейки iPhone 11 и iPhone SE 2 (всего 33 модели)[^3^]. В бюллетене безопасности Apple для iOS 27.0.1 целевыми устройствами прямо указаны "iPhone 11 and later… iPad mini 6th generation and later"[^4^]. Поддержки лишились iPhone XR и XS (чип A12), но не iPhone 11[^5^].
+В официальном списке совместимости iOS 27 значатся все модели линейки iPhone 11 и iPhone SE 2 (всего 33 модели)[^3]. В бюллетене безопасности Apple для iOS 27.0.1 целевыми устройствами прямо указаны "iPhone 11 and later… iPad mini 6th generation and later"[^4]. Поддержки лишились iPhone XR и XS (чип A12), но не iPhone 11[^5].
 
 **Последствия**: Выстроенная в отчете логическая цепочка «раз отсекли iPhone 11, то iPhone 12 на грани списания» рассыпается. Линейка 12 полноценно поддерживается. [Аналитический вывод] Учитывая средний жизненный цикл обновлений Apple в 6–7 лет, iPhone 12 гарантированно получит еще как минимум один мажорный цикл, ощущение «срочного ухода на пенсию» сильно гиперболизировано.
 
 ### A3. Фактическая ошибка отчета №2: «Оставаясь на 26, не получишь патчей безопасности / преждевременный уход на пенсию» — [ОПРОВЕРГНУТО С УТОЧНЕНИЕМ]
-Apple ведет параллельную поддержку ветки iOS 26: 2026-09-28 **в один день** с iOS 27.0.1 вышло обновление iOS 26.7.1 / iPadOS 26.7.1, исправившее опаснейшую уязвимость CVE-2026-86950 (out-of-bounds write в CoreGraphics с исполнением произвольного кода, которая активно эксплуатировалась в целевых кибератаках и внесена CISA в каталог KEV)[^6^][^7^][^8^].
+Apple ведет параллельную поддержку ветки iOS 26: 2026-09-28 **в один день** с iOS 27.0.1 вышло обновление iOS 26.7.1 / iPadOS 26.7.1, исправившее опаснейшую уязвимость CVE-2026-86950 (out-of-bounds write в CoreGraphics с исполнением произвольного кода, которая активно эксплуатировалась в целевых кибератаках и внесена CISA в каталог KEV)[^6][^7][^8].
 
-- «Оставаться на ветке iOS 26» ≠ остаться без патчей: апдейт 26.7.1 выпущен специально для тех, кто не хочет переходить на iOS 27[^9^].
-- **Однако «сидеть конкретно на версии 26.1» действительно означает остаться без защиты**: сборка 26.1 вышла 2025-11-03, и все исправления версий 26.2–26.7.1 (включая критический 0-day) на нее не распространяются[^10^].
+- «Оставаться на ветке iOS 26» ≠ остаться без патчей: апдейт 26.7.1 выпущен специально для тех, кто не хочет переходить на iOS 27[^9].
+- **Однако «сидеть конкретно на версии 26.1» действительно означает остаться без защиты**: сборка 26.1 вышла 2025-11-03, и все исправления версий 26.2–26.7.1 (включая критический 0-day) на нее не распространяются[^10].
 
 Отчет смешал понятия «ветка» и «версия». Корректная формулировка: «Оставаться на устаревшей 26.1 — небезопасно, но ветка iOS 26 продолжает получать патчи».
 
 ### A4. Реальный статус джейлбрейка для A14/A15 — Посылка пользователя неприменима к его устройствам
-- Джейлбрейк Dopamine 3.0 (выпущен 2026-08-07 разработчиком opa334) поддерживает iOS 26.0/26.0.1 **исключительно на процессорах A12/A13** (из телефонов это линейка iPhone 11 и SE2)[^11^][^12^].
-- Для чипов A14–A17/M1/M2 предел в Dopamine — строго **iOS 17.3.1** (начиная с iOS 17.4 нет публичного обхода защиты SPTM). Для iPhone 12 и новее ни на одной сборке iOS 26 публичных джейлбрейков нет[^13^][^14^].
-- Версия Dopamine 3.0.5 добавила бета-сборки 26.1 beta 1–3, но снова **только для A12/A13**[^15^].
+- Джейлбрейк Dopamine 3.0 (выпущен 2026-08-07 разработчиком opa334) поддерживает iOS 26.0/26.0.1 **исключительно на процессорах A12/A13** (из телефонов это линейка iPhone 11 и SE2)[^11][^12].
+- Для чипов A14–A17/M1/M2 предел в Dopamine — строго **iOS 17.3.1** (начиная с iOS 17.4 нет публичного обхода защиты SPTM). Для iPhone 12 и новее ни на одной сборке iOS 26 публичных джейлбрейков нет[^13][^14].
+- Версия Dopamine 3.0.5 добавила бета-сборки 26.1 beta 1–3, но снова **только для A12/A13**[^15].
 
 **Вывод: Для iPhone 12 Pro Max (A14) и iPad mini 6 (A15) ни на одной версии iOS/iPadOS 26 (включая 26.0.1, 26.1, 26.7.1) джейлбрейка нет. Посылка пользователя «26.0.1 уже взломана» относится только к чужим чипам A13. Стратегия «сидеть на 26.1 ради джейлбрейка» дает пользователю ровно 0 шансов.**
 
 ### A5. «Цепочка Calif покрывает 27.0.1» — Частично верно, опущены 3 критических ограничения
 Проверенные факты:
-- 2026-10-16 Calif продемонстрировала непривязанный джейлбрейк iOS 27.0.1 (сборка 24A446) на iPhone 18 Pro (iPhone19,2, чип T8160)[^16^][^17^].
-- Уязвимости не раскрыты, инструментов нет; фраза "will be released in due time" — лишь цитата из рассылки без обязательств[^16^][^18^].
+- 2026-10-16 Calif продемонстрировала непривязанный джейлбрейк iOS 27.0.1 (сборка 24A446) на iPhone 18 Pro (iPhone19,2, чип T8160)[^16][^17].
+- Уязвимости не раскрыты, инструментов нет; фраза "will be released in due time" — лишь цитата из рассылки без обязательств[^16][^18].
 - Демонстрация проведена на чипе **T8160 (A20 Pro)**, доказательств совместимости с A14/A15 нет.
 
-Опущенные ограничения: ① нет публичных сроков релиза; ② нет подтверждения работы на A14/A15; ③ при приватной передаче в Apple уязвимость оперативно закроют[^19^]. [Аналитический вывод] Конференционные сценические показы крайне редко доходят до релизов готовых программ для конечных пользователей.
+Опущенные ограничения: ① нет публичных сроков релиза; ② нет подтверждения работы на A14/A15; ③ при приватной передаче в Apple уязвимость оперативно закроют[^19]. [Аналитический вывод] Конференционные сценические показы крайне редко доходят до релизов готовых программ для конечных пользователей.
 
 ### A6. Необратимость обновления: подпись и сохранение SHSH
-- Apple закрыла подпись iOS 27.0 и 26.7 в начале октября[^9^]. Откат с iOS 27 на iOS 26 невозможен[^7^].
-- Для процессоров A12 и новее сохранение SHSH blob бесполезно (несовместимость Cryptex/SEP сделала утилиту FutureRestore неработоспособной)[^20^].
+- Apple закрыла подпись iOS 27.0 и 26.7 в начале октября[^9]. Откат с iOS 27 на iOS 26 невозможен[^7].
+- Для процессоров A12 и новее сохранение SHSH blob бесполезно (несовместимость Cryptex/SEP сделала утилиту FutureRestore неработоспособной)[^20].
 - **Переход на 27.0.1 — это билет в один конец**.
-- Временный буфер: профили Delayed OTA дают окно отсрочки около 90 дней для установки уже неподписываемых сборок[^21^].
+- Временный буфер: профили Delayed OTA дают окно отсрочки около 90 дней для установки уже неподписываемых сборок[^21].
 
 ### A7. Тайминг закрытия окна подписи 27.0.1
-- iOS 27 вышла 2026-09-14; сборка 27.0.1 (24A446) — 2026-09-28[^4^][^22^].
-- Версия iOS 27.1 выйдет 23 октября эксклюзивно для iPhone Duo, а обычные смартфоны перейдут на 27.2 в конце октября[^23^][^24^].
+- iOS 27 вышла 2026-09-14; сборка 27.0.1 (24A446) — 2026-09-28[^4][^22].
+- Версия iOS 27.1 выйдет 23 октября эксклюзивно для iPhone Duo, а обычные смартфоны перейдут на 27.2 в конце октября[^23][^24].
 - [Аналитический вывод] Статус 27.0.1 как актуальной версии продлится еще 1–2 недели. После релиза 27.2 окно подписания 27.0.1 захлопнется.
 
 ### A8. Аппаратный эксплойт usbliter8 и процессоры A14/A15
-- Эксплойт usbliter8 (Paradigm Shift, 2026-06-18) поражает SecureROM чипов A12/A13/S4/S5. **Процессоры A14 и новее не затронуты** (Apple перенастроила DART)[^26^][^27^].
+- Эксплойт usbliter8 (Paradigm Shift, 2026-06-18) поражает SecureROM чипов A12/A13/S4/S5. **Процессоры A14 и новее не затронуты** (Apple перенастроила DART)[^26][^27].
 - [Аналитический вывод] У пользователя нет аппаратной подушки безопасности; джейлбрейка на его чипах можно ждать только через редкие программные баги ядра.
 
 ---
@@ -120,31 +120,31 @@ Q2. Стоит ли жертвовать безопасностью ради о�
 
 ## Источники информации
 
-[^1^]: EveryMac, "iPhone and iPad with an Apple A14 Bionic Processor", 2026-07-13. https://everymac.com/devices/by-processor/all-apple-a14-bionic-processor-apple-devices.html
-[^2^]: Phonebot, "All About Apple A15 Bionic Chip", 2026-08-24. https://www.phonebot.com.au/blog/a15-bionic-chip
-[^3^]: TechRadar, "Which iPhones support iOS 27 and Siri AI?", 2026-09-14. https://www.techradar.com/phones/ios/ios-27-and-siri-ai-compatibility-explained
-[^4^]: Apple Support, "Apple security releases", 2026-09-28. https://support.apple.com/en-us/100100
-[^5^]: Rajatheertha, "iOS 27.0.1 Is the Latest iPhone Update", 2026-10-07. https://www.rajatheertha.com/news/ios-27-0-1-latest-update-compatible-iphones-battery-drain-problems-fixes
-[^6^]: CRC Cloud Security Briefing, 2026-10-12. https://www.crccloud.com/resources/security-briefing/
-[^7^]: iThinkDiff, "iOS 26.7.1 Fixes a CoreGraphics Flaw Possibly Used in Attacks", 2026-09-28. https://www.ithinkdiff.com/ios-26-7-1-coregraphics-exploited-vulnerability-fix/
-[^8^]: 9to5Mac, "iOS 26.7.1 available now for iPhone with security fixes", 2026-09-28. https://9to5mac.com/2026/09/28/ios-26-7-1-available-now-for-iphone-with-security-fixes/
-[^9^]: APLWire, "You can no longer downgrade to iOS 27 or iOS 26.7", 2026-10-06. https://www.aplwire.com/2026/10/06/you-can-no-longer-downgrade-to-ios-27-or-ios-26-7/
-[^10^]: MacRumors Forums, "iOS 26.1 — Bug Fixes, Changes, and Improvements", 2025-11-03. https://forums.macrumors.com/threads/ios-26-1-bug-fixes-changes-and-improvements.2470382/
-[^11^]: MacRumors, "iOS 26 Gets First Jailbreak Thanks to Dopamine", 2026-08-07. https://www.macrumors.com/45/
-[^12^]: TechSpot, "A jailbreak for iOS 26 is finally here, 326 days after launch", 2026-08-09. https://www.techspot.com/news/113408-jailbreak-ios-26-finally-here-326-days-after.html
-[^13^]: TechEngage, "iOS Jailbreak History: Every Major Tool From 2007 to 2026", 2026-09-14. https://techengage.com/ios-jailbreaking-complete-history/
-[^14^]: MacMagazine, "Primeiro jailbreak para o iOS 26 é lançado", 2026-08-10. https://macmagazine.com.br/post/2026/08/10/primeiro-jailbreak-para-o-ios-26-e-lancado-mas-so-em-certos-iphones/
-[^15^]: TheAppleWiki, "Dopamine", 2026-10-12. https://theapplewiki.com/wiki/Dopamine
-[^16^]: Cyber Security News, "iOS 27.0.1 Untethered Jailbreak Demonstrated on iPhone 18 Pro", 2026-10-16. https://cybersecuritynews.com/ios-27-0-1-jailbreak-demonstrated/
-[^17^]: Pasquale Pillitteri, "Calif Unveils iPhone 18 Pro Jailbreak on iOS 27.0.1 at Hexacon", 2026-10-16. https://pasqualepillitteri.it/en/news/24540/jailbreak-iphone-18-pro-ios-27-calif-hexacon
-[^18^]: Decrypt, "Hackers Jailbreak iPhone 18 Pro on Stage, and It Survives a Reboot", 2026-10-17. https://decrypt.co/381177/hackers-jailbreak-iphone-18-pro-survives-reboot
-[^19^]: GBHackers, "Researchers Demonstrate iOS 27.0.1 Untethered Jailbreak on iPhone 18 Pro", 2026-10-17. https://gbhackers.com/ios-27-0-1-untethered-jailbreak/
-[^20^]: ONE Jailbreak, "SEP and Baseband Compatibility List for FutureRestore downgrade", 2025-09-05. https://onejailbreak.com/blog/futurerestore-sep-baseband-compatibility-list/
-[^21^]: BetaProfiles Forum, "How to Update Using Delayed OTAs", 2025-05-21. https://forum.betaprofiles.com/t/how-to-update-from-ios-beta-to-an-unsigned-official-release-using-delayed-otas/19574
-[^22^]: Yahoo Tech, "Apple Releases iOS 27.0.1 for iPhone: Here's What's Fixed", 2026-09-29. https://tech.yahoo.com/ai/apple-intelligence/articles/apple-releases-ios-27-0-185637462.html
-[^23^]: MacRumors, "iPhone Duo Will Have Day-One iOS 27.1 Update", 2026-10-13. https://www.macrumors.com/2026/10/13/iphone-duo-day-one-update/
-[^24^]: Сводка Michael Tsai Blog, 2026-10-14. https://mjtsai.com/blog/
-[^25^]: APLWire, "iOS 27.0.1 is the direct new upgrade from iOS 26", 2026-10-09. https://www.aplwire.com/2026/10/09/ios-27-0-1-is-the-direct-new-upgrade-from-ios-26-not-ios-27/
-[^26^]: The Hacker News, "Unpatchable 'usbliter8' Exploit Breaks Apple A12 and A13 SecureROM Boot Chain", 2026-06-20. https://thehackernews.com/2026/06/unpatchable-usbliter8-exploit-breaks.html
-[^27^]: Hoplon Infosec, "usbliter8 Exploit: Apple A12/A13 SecureROM Flaw Explained", 2026-06-20. https://hoploninfosec.com/usbliter8-exploit-apple-a12-a13-securerom-vulnerability
-[^28^]: Обзор SMZDM по статусу чипов, 2026-09-17. https://post.smzdm.com/p/a70nrpn9/
+[^1]: EveryMac, "iPhone and iPad with an Apple A14 Bionic Processor", 2026-07-13. https://everymac.com/devices/by-processor/all-apple-a14-bionic-processor-apple-devices.html
+[^2]: Phonebot, "All About Apple A15 Bionic Chip", 2026-08-24. https://www.phonebot.com.au/blog/a15-bionic-chip
+[^3]: TechRadar, "Which iPhones support iOS 27 and Siri AI?", 2026-09-14. https://www.techradar.com/phones/ios/ios-27-and-siri-ai-compatibility-explained
+[^4]: Apple Support, "Apple security releases", 2026-09-28. https://support.apple.com/en-us/100100
+[^5]: Rajatheertha, "iOS 27.0.1 Is the Latest iPhone Update", 2026-10-07. https://www.rajatheertha.com/news/ios-27-0-1-latest-update-compatible-iphones-battery-drain-problems-fixes
+[^6]: CRC Cloud Security Briefing, 2026-10-12. https://www.crccloud.com/resources/security-briefing/
+[^7]: iThinkDiff, "iOS 26.7.1 Fixes a CoreGraphics Flaw Possibly Used in Attacks", 2026-09-28. https://www.ithinkdiff.com/ios-26-7-1-coregraphics-exploited-vulnerability-fix/
+[^8]: 9to5Mac, "iOS 26.7.1 available now for iPhone with security fixes", 2026-09-28. https://9to5mac.com/2026/09/28/ios-26-7-1-available-now-for-iphone-with-security-fixes/
+[^9]: APLWire, "You can no longer downgrade to iOS 27 or iOS 26.7", 2026-10-06. https://www.aplwire.com/2026/10/06/you-can-no-longer-downgrade-to-ios-27-or-ios-26-7/
+[^10]: MacRumors Forums, "iOS 26.1 — Bug Fixes, Changes, and Improvements", 2025-11-03. https://forums.macrumors.com/threads/ios-26-1-bug-fixes-changes-and-improvements.2470382/
+[^11]: MacRumors, "iOS 26 Gets First Jailbreak Thanks to Dopamine", 2026-08-07. https://www.macrumors.com/45/
+[^12]: TechSpot, "A jailbreak for iOS 26 is finally here, 326 days after launch", 2026-08-09. https://www.techspot.com/news/113408-jailbreak-ios-26-finally-here-326-days-after.html
+[^13]: TechEngage, "iOS Jailbreak History: Every Major Tool From 2007 to 2026", 2026-09-14. https://techengage.com/ios-jailbreaking-complete-history/
+[^14]: MacMagazine, "Primeiro jailbreak para o iOS 26 é lançado", 2026-08-10. https://macmagazine.com.br/post/2026/08/10/primeiro-jailbreak-para-o-ios-26-e-lancado-mas-so-em-certos-iphones/
+[^15]: TheAppleWiki, "Dopamine", 2026-10-12. https://theapplewiki.com/wiki/Dopamine
+[^16]: Cyber Security News, "iOS 27.0.1 Untethered Jailbreak Demonstrated on iPhone 18 Pro", 2026-10-16. https://cybersecuritynews.com/ios-27-0-1-jailbreak-demonstrated/
+[^17]: Pasquale Pillitteri, "Calif Unveils iPhone 18 Pro Jailbreak on iOS 27.0.1 at Hexacon", 2026-10-16. https://pasqualepillitteri.it/en/news/24540/jailbreak-iphone-18-pro-ios-27-calif-hexacon
+[^18]: Decrypt, "Hackers Jailbreak iPhone 18 Pro on Stage, and It Survives a Reboot", 2026-10-17. https://decrypt.co/381177/hackers-jailbreak-iphone-18-pro-survives-reboot
+[^19]: GBHackers, "Researchers Demonstrate iOS 27.0.1 Untethered Jailbreak on iPhone 18 Pro", 2026-10-17. https://gbhackers.com/ios-27-0-1-untethered-jailbreak/
+[^20]: ONE Jailbreak, "SEP and Baseband Compatibility List for FutureRestore downgrade", 2025-09-05. https://onejailbreak.com/blog/futurerestore-sep-baseband-compatibility-list/
+[^21]: BetaProfiles Forum, "How to Update Using Delayed OTAs", 2025-05-21. https://forum.betaprofiles.com/t/how-to-update-from-ios-beta-to-an-unsigned-official-release-using-delayed-otas/19574
+[^22]: Yahoo Tech, "Apple Releases iOS 27.0.1 for iPhone: Here's What's Fixed", 2026-09-29. https://tech.yahoo.com/ai/apple-intelligence/articles/apple-releases-ios-27-0-185637462.html
+[^23]: MacRumors, "iPhone Duo Will Have Day-One iOS 27.1 Update", 2026-10-13. https://www.macrumors.com/2026/10/13/iphone-duo-day-one-update/
+[^24]: Сводка Michael Tsai Blog, 2026-10-14. https://mjtsai.com/blog/
+[^25]: APLWire, "iOS 27.0.1 is the direct new upgrade from iOS 26", 2026-10-09. https://www.aplwire.com/2026/10/09/ios-27-0-1-is-the-direct-new-upgrade-from-ios-26-not-ios-27/
+[^26]: The Hacker News, "Unpatchable 'usbliter8' Exploit Breaks Apple A12 and A13 SecureROM Boot Chain", 2026-06-20. https://thehackernews.com/2026/06/unpatchable-usbliter8-exploit-breaks.html
+[^27]: Hoplon Infosec, "usbliter8 Exploit: Apple A12/A13 SecureROM Flaw Explained", 2026-06-20. https://hoploninfosec.com/usbliter8-exploit-apple-a12-a13-securerom-vulnerability
+[^28]: Обзор SMZDM по статусу чипов, 2026-09-17. https://post.smzdm.com/p/a70nrpn9/
