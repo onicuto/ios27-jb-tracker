@@ -1,0 +1,13 @@
+# Editor artifacts
+.obsidian/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS artifacts
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
